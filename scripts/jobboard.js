@@ -2,40 +2,8 @@ var rssDefault = `https://kent.joinhandshake.com/external_feeds/14596/public.rss
 
 window.onload = getJobs(rssDefault);
 
-var header = document.getElementById("part-time");
-var btns = header.getElementsByClassName("major");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active-major");
-
-    // If there's no active class
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active-major", "");
-    }
-
-    // Add the active class to the current/clicked button
-    this.className += " active-major";
-  });
-}
-
-var header = document.getElementById("full-time");
-var btns = header.getElementsByClassName("major");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active-major");
-
-    // If there's no active class
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active-major", "");
-    }
-
-    // Add the active class to the current/clicked button
-    this.className += " active-major";
-  });
-}
-
-var header = document.getElementById("full-time-internship");
-var btns = header.getElementsByClassName("major");
+// var header = document.getElementById("part-time");
+var btns = document.getElementsByClassName("major");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active-major");
@@ -134,8 +102,6 @@ function getJobs(rss) {
         button.target = "_blank";
         buttonContainer.appendChild(button);
         div.appendChild(buttonContainer);
-
-        console.log(item);
       }
     },
     complete: function () {
