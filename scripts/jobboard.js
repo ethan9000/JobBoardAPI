@@ -2,12 +2,12 @@ var rssDefault = `https://kent.joinhandshake.com/external_feeds/14596/public.rss
 
 window.onload = getJobs(rssDefault);
 
-$(".major").on("click", function () {
-  $(".major").removeClass("active-major");
-  $(this).addClass("active-major");
-});
-
 function getJobs(rss) {
+  $(".major").on("click", function () {
+    $(".major").removeClass("active-major");
+    $(this).addClass("active-major");
+  });
+
   $.ajax({
     url: "https://jsonapi.ethanh.works/api?",
     method: "GET",
