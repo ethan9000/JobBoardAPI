@@ -1,7 +1,3 @@
-var rssDefault = `https://kent.joinhandshake.com/external_feeds/14596/public.rss?token=bOuon-PBh-xrLAQ_e-lIgL4NE76vzSIsMDver5Y0CnihwzjSTcWv8Q`;
-
-window.onload = getJobs(rssDefault);
-
 function getJobs(rss) {
   $(".major").on("click", function () {
     $(".major").removeClass("active-major");
@@ -9,7 +5,7 @@ function getJobs(rss) {
   });
 
   $.ajax({
-    url: "https://jsonapi.ethanh.works/api?",
+    url: "https://job-board-api-mabeam.vercel.app/api?",
     method: "GET",
     dataType: "json",
     data: {
