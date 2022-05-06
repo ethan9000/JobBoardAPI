@@ -9,7 +9,7 @@ function getJobs(rss) {
   });
 
   $.ajax({
-    url: "https://jsonapi.ethanh.works/api?",
+    url: "https://job-board-api-mabeam.vercel.app/api?",
     method: "GET",
     dataType: "json",
     data: {
